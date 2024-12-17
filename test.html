@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>figma test design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "League Spartan", serif;
+        }
+
+        #left {
+            width: 50%;
+            background-color: white;
+            height: 100vh;
+            padding: 20px;
+            z-index: 0;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #right {
+            width: 50%;
+            background-color: green;
+            height: 100vh;
+        }
+
+        #parent {
+            display: flex;
+        }
+
+        #header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        #title {
+            margin-top: 20px;
+
+        }
+
+        #title>h1 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        #title>p {
+            text-align: center;
+        }
+
+        #google-login-button {
+            border: 2px solid #1e1e1e91;
+            border-radius: 8px;
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 30px;
+            max-width: 300px;
+            width: 100%;
+
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        #google-login-button:hover {
+            /* background-color: #ad3838; */
+            transform: scale(1.05);
+            box-shadow: 5px 4px 2px 0px #0000ff2b;
+        }
+
+        #title,
+        #header {
+            width: 100%;
+        }
+
+        #seperator {
+            width: 60%;
+            text-align: center;
+            margin-top: 15px;
+            position: relative;
+        }
+
+        #seperator::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-color: blue;
+            position: absolute;
+            height: 1px;
+            top: 50%;
+            left: 0px;
+            z-index: -1;
+        }
+
+        #seperator>span {
+            background: white;
+            padding: 10px;
+        }
+
+        .input_box {
+            margin-top: 40px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            position: relative;
+        }
+
+        .input_box>input {
+            all: unset;
+        }
+
+        .email::before,
+        .password::before {
+            content: "Your Email";
+            height: 100%;
+            /* width: 100%; */
+            padding-right: 7px;
+            padding-left: 7px;
+            background-color: #ffffff;
+            position: absolute;
+            /* height: 1px; */
+            top: 50%;
+            top: -5px;
+            left: 10px;
+            /* z-index: -1; */
+            font-size: 10px;
+
+        }
+
+        .password::before {
+            content: "Your Password"
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="left">
+            <div id="header">
+                <div>Logo</div>
+                <div>buttons</div>
+            </div>
+            <div id="title">
+                <h1>hi there!</h1>
+                <p>Welcome, Community Dashboard</p>
+            </div>
+            <div id="google-login-button">
+                Log in with google
+            </div>
+            <div id="seperator">
+                <span>or</span>
+            </div>
+            <div class="input_box email">
+                <input type="email" />
+            </div>
+            <div class="input_box password">
+                <input type="password" />
+            </div>
+            <div></div>
+        </div>
+        <div id="right"> right</div>
+    </div>
+
+</body>
+
+</html>
